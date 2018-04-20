@@ -12,7 +12,7 @@ if (isset($_GET['acao'])) {
 switch ($acao){
 
     case 'index':
-        echo '<pre>';
+
         $crud = new CrudCategoria();
         $categorias = $crud->getCategorias();
         include '../views/categorias/index.php';
@@ -32,7 +32,7 @@ switch ($acao){
     case 'listar':
         $crud = new CrudCategoria();
         $categoria = $crud->getCategoria($_GET['id']);
-        include '../views/categorias/categoria.php';
+        include '../views/categorias/categorias.php';
         break;
 
 
